@@ -1,0 +1,26 @@
+
+
+<br>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <form (submit)="this.board.lignes = nouvellePartie(myLignes,myColonnes,myMines)" >
+        <div class="form-group">
+          <label>nombre de lignes :</label>
+          <input #myLignes class="form-control"  type="number"  placeholder="lignes" min="0"  required>
+        </div>
+        <div class="form-group">
+          <label>nombre de lignes :</label>
+          <input #myColonnes class="form-control" type="number"  placeholder="columns" min="0"  required>
+        </div>
+        <div class="form-group">
+          <label>nombre des mines :</label>
+          <input #myMines class="form-control" type="number"  placeholder="mine" min="0" required>
+        </div>
+
+      <button type="submit" class="btn btn-primary">nouvelle partie</button>
+    </form>
+  </div>
+
+</div>
+
+<app-grille [nbrMines]="this.mesMines" [nbrLignes]="this.mesLignes" [nbrColumns]="this.mesColumns" ></app-grille>

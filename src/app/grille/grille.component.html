@@ -1,0 +1,9 @@
+<br>
+<h2 style="text-align: center; margin: auto;">timer : {{this.minute}}min:{{this.seconde}}sec</h2>
+<br>
+<div class="row" style="text-align: center; margin: auto;"  [style.width.px]="this.largeur" *ngFor="let ligne of this.champsMines ; let i = index">
+    <div *ngFor="let col of ligne ; let j = index" style="float: left;"  >
+      <app-case [me]="col" on-click="showboard(col,i,j)" ></app-case>
+    </div>
+</div>
+<h1>{{etatPartie}}</h1>
